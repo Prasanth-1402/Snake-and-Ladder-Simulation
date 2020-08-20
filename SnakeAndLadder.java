@@ -18,7 +18,11 @@ class SnakeAndLadder{
 			else{
 				System.out.println("Staying at the same Position safely!");
 			}
-				System.out.println("Now player is at : "+playerPosition);
+			if(playerPosition>100){
+				 playerPosition -= dieOutput;
+				 System.out.println("!!---Crossing 100 So Re-Roll the Dice---!!");
+			}
+			System.out.println("Now player is at : "+playerPosition);
 		}
 	}
 	private static int randomGenerator(int n){
